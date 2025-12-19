@@ -84,6 +84,10 @@ static struct msi_ec_conf CONF_G1_0 __initdata = {
 		.address = 0x98,
 		.bit     = 7,
 	},
+	.usb_powershare = {
+			.address       = MSI_EC_ADDR_UNKNOWN,
+			.bit           = 5,
+	},
 	.shift_mode = {
 		.address = 0xf2,
 		.modes = {
@@ -171,6 +175,10 @@ static struct msi_ec_conf CONF_G1_1 __initdata = {
 		.address = 0x98,
 		.bit     = 7,
 	},
+	.usb_powershare = {
+			.address       = MSI_EC_ADDR_UNKNOWN,
+			.bit           = 5,
+	},
 	.shift_mode = {
 		.address = 0xf2,
 		.modes = {
@@ -245,6 +253,10 @@ static struct msi_ec_conf CONF_G1_2 __initdata = {
 	.cooler_boost = {
 		.address = 0x98,
 		.bit     = 7,
+	},
+	.usb_powershare = {
+			.address       = MSI_EC_ADDR_UNKNOWN,
+			.bit           = 5,
 	},
 	.shift_mode = {
 		.address = 0xf2,
@@ -333,6 +345,10 @@ static struct msi_ec_conf CONF_G1_3 __initdata = {
 		.address = 0x98,
 		.bit     = 7,
 	},
+	.usb_powershare = {
+			.address       = MSI_EC_ADDR_UNKNOWN,
+			.bit           = 5,
+	},
 	.shift_mode = {
 		.address = 0xf2,
 		.modes = {
@@ -406,6 +422,10 @@ static struct msi_ec_conf CONF_G1_4 __initdata = {
 	.cooler_boost = {
 		.address = 0x98,
 		.bit     = 7,
+	},
+	.usb_powershare = {
+			.address       = MSI_EC_ADDR_UNKNOWN,
+			.bit           = 5,
 	},
 	.shift_mode = {
 		.address = 0xf2,
@@ -484,6 +504,10 @@ static struct msi_ec_conf CONF_G1_5 __initdata = {
 	.cooler_boost = {
 		.address = 0x98,
 		.bit     = 7,
+	},
+	.usb_powershare = {
+			.address       = MSI_EC_ADDR_UNKNOWN,
+			.bit           = 5,
 	},
 	.shift_mode = {
 		.address = 0xf2,
@@ -565,6 +589,10 @@ static struct msi_ec_conf CONF_G1_6 __initdata = {
 	.cooler_boost = {
 		.address = 0x98,
 		.bit     = 7,
+	},
+	.usb_powershare = {
+			.address       = MSI_EC_ADDR_UNKNOWN,
+			.bit           = 5,
 	},
 	.shift_mode = {
 		.address = 0xf2,
@@ -651,6 +679,10 @@ static struct msi_ec_conf CONF_G1_7 __initdata = {
 		.address = 0x98,
 		.bit     = 7,
 	},
+	.usb_powershare = {
+			.address       = MSI_EC_ADDR_UNKNOWN,
+			.bit           = 5,
+	},
 	.shift_mode = {
 		.address = 0xf2,
 		.modes = {
@@ -724,6 +756,10 @@ static struct msi_ec_conf CONF_G1_8 __initdata = {
 	.cooler_boost = {
 		.address = 0x98,
 		.bit     = 7,
+	},
+	.usb_powershare = {
+			.address       = MSI_EC_ADDR_UNKNOWN,
+			.bit           = 5,
 	},
 	.shift_mode = {
 		.address = 0xf2,
@@ -799,6 +835,10 @@ static struct msi_ec_conf CONF_G1_9 __initdata = {
 		.address = 0x98,
 		.bit     = 7,
 	},
+	.usb_powershare = {
+			.address       = MSI_EC_ADDR_UNKNOWN,
+			.bit           = 5,
+	},
 	.shift_mode = {
 		.address = 0xf2,
 		.modes = {
@@ -870,6 +910,10 @@ static struct msi_ec_conf CONF_G1_10 __initdata = {
 	.cooler_boost = {
 		.address = 0x98,
 		.bit     = 7,
+	},
+	.usb_powershare = {
+			.address       = MSI_EC_ADDR_UNKNOWN,
+			.bit           = 5,
 	},
 	.shift_mode = {
 		.address = 0xf2,
@@ -948,6 +992,10 @@ static struct msi_ec_conf CONF_G1_11 __initdata = {
 		.address = 0x98,
 		.bit     = 7,
 	},
+	.usb_powershare = {
+			.address       = MSI_EC_ADDR_UNKNOWN,
+			.bit           = 5,
+	},
 	.shift_mode = {
 		.address = 0xf2,
 		.modes = {
@@ -1019,6 +1067,10 @@ static struct msi_ec_conf CONF_G1_13 __initdata = {
 	.cooler_boost = {
 		.address = 0x98,
 		.bit     = 7,
+	},
+	.usb_powershare = {
+			.address       = MSI_EC_ADDR_UNKNOWN,
+			.bit           = 5,
 	},
 	.shift_mode = {
 		.address = 0xf2,
@@ -1104,6 +1156,10 @@ static struct msi_ec_conf CONF_G2_0 __initdata = {
 	.cooler_boost = {
 		.address = 0x98,
 		.bit     = 7,
+	},
+	.usb_powershare = {
+			.address       = 0xbf,
+			.bit           = 5,
 	},
 	.shift_mode = {
 		.address = 0xd2,
@@ -1230,6 +1286,10 @@ static struct msi_ec_conf CONF_G2_1 __initdata = {
 		.address = 0x98,
 		.bit     = 7,
 	},
+	.usb_powershare = {
+			.address       = MSI_EC_ADDR_UNKNOWN,
+			.bit           = 5,
+	},
 	.shift_mode = {
 		.address = 0xd2,
 		.modes = {
@@ -1323,6 +1383,10 @@ static struct msi_ec_conf CONF_G2_2 __initdata = {
 		.address = 0x98,
 		.bit     = 7,
 	},
+	.usb_powershare = {
+			.address       = MSI_EC_ADDR_UNKNOWN,
+			.bit           = 5,
+	},
 	.shift_mode = {
 		.address = 0xd2,
 		.modes = {
@@ -1415,6 +1479,10 @@ static struct msi_ec_conf CONF_G2_3 __initdata = {
 		.address = 0x98,
 		.bit     = 7,
 	},
+	.usb_powershare = {
+			.address       = MSI_EC_ADDR_UNKNOWN,
+			.bit           = 5,
+	},
 	.shift_mode = {
 		.address = 0xd2,
 		.modes = {
@@ -1487,6 +1555,10 @@ static struct msi_ec_conf CONF_G2_4 __initdata = {
 	.cooler_boost = {
 		.address = 0x98,
 		.bit     = 7,
+	},
+	.usb_powershare = {
+			.address       = MSI_EC_ADDR_UNKNOWN,
+			.bit           = 5,
 	},
 	.shift_mode = {
 		.address = 0xd2,
@@ -1562,6 +1634,10 @@ static struct msi_ec_conf CONF_G2_5 __initdata = {
 	.cooler_boost = {
 		.address = 0x98,
 		.bit     = 7,
+	},
+	.usb_powershare = {
+			.address       = MSI_EC_ADDR_UNKNOWN,
+			.bit           = 5,
 	},
 	.shift_mode = {
 		.address = 0xd2,
@@ -1648,6 +1724,10 @@ static struct msi_ec_conf CONF_G2_6 __initdata = {
 	.cooler_boost = {
 		.address = 0x98,
 		.bit     = 7,
+	},
+	.usb_powershare = {
+			.address       = MSI_EC_ADDR_UNKNOWN,
+			.bit           = 5,
 	},
 	.shift_mode = {
 		.address = 0xd2,
@@ -1788,6 +1868,10 @@ static struct msi_ec_conf CONF_G2_10 __initdata = {
 	.cooler_boost = {
 		.address = 0x98,
 		.bit     = 7,
+	},
+	.usb_powershare = {
+			.address       = MSI_EC_ADDR_UNKNOWN,
+			.bit           = 5,
 	},
 	.shift_mode = {
 		.address = 0xd2,
@@ -2330,6 +2414,37 @@ static ssize_t cooler_boost_store(struct device *dev,
 	return count;
 }
 
+static ssize_t usb_powershare_show(struct device *device,
+				 struct device_attribute *attr, char *buf)
+{
+	int result;
+	bool value;
+
+	result = ec_check_bit(conf.usb_powershare.address, conf.usb_powershare.bit, &value);
+	if (result < 0)
+		return result;
+
+	return sysfs_emit(buf, "%s\n", str_on_off(value));
+}
+
+static ssize_t usb_powershare_store(struct device *dev,
+				  struct device_attribute *attr,
+				  const char *buf, size_t count)
+{
+	int result;
+	bool value;
+
+	result = kstrtobool(buf, &value);
+	if (result)
+		return result;
+
+	result = ec_set_bit(conf.usb_powershare.address, conf.usb_powershare.bit, value);
+	if (result < 0)
+		return result;
+
+	return count;
+}
+
 static ssize_t available_shift_modes_show(struct device *device,
 					  struct device_attribute *attr,
 					  char *buf)
@@ -2549,6 +2664,7 @@ static DEVICE_ATTR_RW(webcam_block);
 static DEVICE_ATTR_RW(fn_key);
 static DEVICE_ATTR_RW(win_key);
 static DEVICE_ATTR_RW(cooler_boost);
+static DEVICE_ATTR_RW(usb_powershare);
 static DEVICE_ATTR_RO(available_shift_modes);
 static DEVICE_ATTR_RW(shift_mode);
 static DEVICE_ATTR_RW(super_battery);
@@ -2563,6 +2679,7 @@ static struct attribute *msi_root_attrs[] = {
 	&dev_attr_fn_key.attr,
 	&dev_attr_win_key.attr,
 	&dev_attr_cooler_boost.attr,
+	&dev_attr_usb_powershare.attr,
 	&dev_attr_available_shift_modes.attr,
 	&dev_attr_shift_mode.attr,
 	&dev_attr_super_battery.attr,
@@ -3009,6 +3126,9 @@ static umode_t msi_ec_is_visible(struct kobject *kobj,
 
 	else if (attr == &dev_attr_cooler_boost.attr)
 		address = conf.cooler_boost.address;
+
+	else if (attr == &dev_attr_usb_powershare.attr)
+		address = conf.usb_powershare.address;
 
 	else if (attr == &dev_attr_available_shift_modes.attr ||
 		 attr == &dev_attr_shift_mode.attr)
