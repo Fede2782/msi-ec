@@ -1,4 +1,4 @@
-VERSION         := 0.13
+VERSION         := 0.14
 DKMS_ROOT_PATH  := /usr/src/msi_ec-$(VERSION)
 KERNELRELEASE   ?= $(shell uname -r)
 KMOD_DIR        := /lib/modules/$(KERNELRELEASE)/updates/drivers/platform/x86
