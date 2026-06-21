@@ -106,10 +106,20 @@ static struct msi_ec_conf CONF_G1_0 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.leds = {
 		.micmute_led_address = 0x2b,
@@ -190,10 +200,20 @@ static struct msi_ec_conf CONF_G1_1 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.leds = {
 		.micmute_led_address = MSI_EC_ADDR_UNSUPP,
@@ -261,10 +281,20 @@ static struct msi_ec_conf CONF_G1_2 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.leds = {
 		.micmute_led_address = 0x2b,
@@ -345,10 +375,20 @@ static struct msi_ec_conf CONF_G1_3 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.leds = {
 		.micmute_led_address = MSI_EC_ADDR_UNSUPP,
@@ -415,10 +455,20 @@ static struct msi_ec_conf CONF_G1_4 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.leds = {
 		.micmute_led_address = MSI_EC_ADDR_UNSUPP,
@@ -489,10 +539,20 @@ static struct msi_ec_conf CONF_G1_5 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = MSI_EC_ADDR_UNSUPP,
 		.rt_fan_speed_address = MSI_EC_ADDR_UNSUPP,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.leds = {
 		.micmute_led_address = 0x2b,
@@ -567,10 +627,20 @@ static struct msi_ec_conf CONF_G1_6 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = MSI_EC_ADDR_UNSUPP,
 		.rt_fan_speed_address = MSI_EC_ADDR_UNSUPP,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.leds = {
 		.micmute_led_address = 0x2b,
@@ -650,10 +720,20 @@ static struct msi_ec_conf CONF_G1_7 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.leds = {
 		.micmute_led_address = MSI_EC_ADDR_UNSUPP,
@@ -718,10 +798,20 @@ static struct msi_ec_conf CONF_G1_8 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.leds = {
 		.micmute_led_address = MSI_EC_ADDR_UNSUPP,
@@ -789,10 +879,20 @@ static struct msi_ec_conf CONF_G1_9 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.leds = {
 		.micmute_led_address = MSI_EC_ADDR_UNSUPP,
@@ -856,10 +956,20 @@ static struct msi_ec_conf CONF_G1_10 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.leds = {
 		.micmute_led_address = MSI_EC_ADDR_UNSUPP,
@@ -930,10 +1040,20 @@ static struct msi_ec_conf CONF_G1_11 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.leds = {
 		.micmute_led_address = 0x2b,
@@ -998,10 +1118,20 @@ static struct msi_ec_conf CONF_G1_13 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.leds = {
 		.micmute_led_address = 0x2b,
@@ -1079,10 +1209,20 @@ static struct msi_ec_conf CONF_G2_0 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = MSI_EC_ADDR_UNSUPP,
 		.rt_fan_speed_address = MSI_EC_ADDR_UNSUPP,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.leds = {
 		.micmute_led_address = 0x2c,
@@ -1200,10 +1340,36 @@ static struct msi_ec_conf CONF_G2_1 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		/*
+		 * CPU fan curve: 7 steps stored at consecutive EC bytes.
+		 * speed_start_address  (0x72): fan speed % for each step (s0..s6)
+		 * temperature_start_address (0x6a): thresholds t1..t6 (no t0;
+		 *   the first speed applies to temps below t1).
+		 *
+		 * RESET_ON_AUTO: restores factory defaults when a non-advanced
+		 * fan_mode is selected, to avoid the broken-fan bug (issue #138).
+		 */
+		.fan_curve = {
+			.speed_start_address       = 0x72,
+			.temperature_start_address = 0x6a,
+			.entries_count             = 7,
+			.apply_strategy            = CURVE_APPLY_STRATEGY_RESET_ON_AUTO,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+		/*
+		 * GPU fan curve mirrors the CPU layout at different addresses.
+		 * speed_start_address  (0x8a): fan speed % for each step (s0..s6)
+		 * temperature_start_address (0x82): thresholds t1..t6
+		 */
+		.fan_curve = {
+			.speed_start_address       = 0x8a,
+			.temperature_start_address = 0x82,
+			.entries_count             = 7,
+			.apply_strategy            = CURVE_APPLY_STRATEGY_RESET_ON_AUTO,
+		},
 	},
 	.leds = {
 		.micmute_led_address = 0x2c,
@@ -1291,10 +1457,20 @@ static struct msi_ec_conf CONF_G2_2 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.leds = {
 		.micmute_led_address = MSI_EC_ADDR_UNSUPP,
@@ -1385,10 +1561,20 @@ static struct msi_ec_conf CONF_G2_3 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = MSI_EC_ADDR_UNSUPP,
 		.rt_fan_speed_address = MSI_EC_ADDR_UNSUPP,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.leds = {
 		.micmute_led_address = 0x2c, // not present on `14F1`
@@ -1455,10 +1641,20 @@ static struct msi_ec_conf CONF_G2_4 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.leds = {
 		.micmute_led_address = 0x2c,
@@ -1528,10 +1724,20 @@ static struct msi_ec_conf CONF_G2_5 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.leds = {
 		.micmute_led_address = 0x2c,
@@ -1611,10 +1817,20 @@ static struct msi_ec_conf CONF_G2_6 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.leds = {
 		.micmute_led_address = MSI_EC_ADDR_UNSUPP,
@@ -1764,10 +1980,20 @@ static struct msi_ec_conf CONF_G2_10 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+			.entries_count             = 0,
+		},
 	},
 	.leds = {
 		.micmute_led_address = 0x2c,
@@ -2421,6 +2647,14 @@ static ssize_t fan_mode_show(struct device *device,
 	return sysfs_emit(buf, "%s (%i)\n", "unknown", rdata);
 }
 
+/*
+ * Forward declaration: defined later in the fan-curve section.
+ * Called by fan_mode_store() so the curve subsystem can react to mode changes
+ * (e.g. write the custom curve on switch-to-advanced, restore defaults on
+ * switch-to-auto with CURVE_APPLY_STRATEGY_RESET_ON_AUTO).
+ */
+static int curve_fan_mode_change(const char *mode);
+
 static ssize_t fan_mode_store(struct device *dev, struct device_attribute *attr,
 			      const char *buf, size_t count)
 {
@@ -2430,6 +2664,18 @@ static ssize_t fan_mode_store(struct device *dev, struct device_attribute *attr,
 		// NULL entries have NULL name
 
 		if (sysfs_streq(conf.fan_mode.modes[i].name, buf)) {
+			const char *mode = conf.fan_mode.modes[i].name;
+
+			/*
+			 * Notify the curve subsystem *before* writing the new
+			 * fan mode to the EC.  This ensures that if the strategy
+			 * requires restoring defaults, they are in place before
+			 * the EC transitions to the new mode.
+			 */
+			result = curve_fan_mode_change(mode);
+			if (result < 0)
+				return result;
+
 			result = ec_write(conf.fan_mode.address,
 					  conf.fan_mode.modes[i].value);
 			if (result < 0)
@@ -2570,6 +2816,7 @@ static struct device_attribute dev_attr_cpu_realtime_fan_speed = {
 static struct attribute *msi_cpu_attrs[] = {
 	&dev_attr_cpu_realtime_temperature.attr,
 	&dev_attr_cpu_realtime_fan_speed.attr,
+	&dev_attr_cpu_curve.attr,  /* fan thermal curve — hidden when unsupported */
 	NULL
 };
 
@@ -2624,8 +2871,591 @@ static struct device_attribute dev_attr_gpu_realtime_fan_speed = {
 static struct attribute *msi_gpu_attrs[] = {
 	&dev_attr_gpu_realtime_temperature.attr,
 	&dev_attr_gpu_realtime_fan_speed.attr,
+	&dev_attr_gpu_curve.attr,  /* fan thermal curve — hidden when unsupported */
 	NULL
 };
+
+// ============================================================ //
+// Fan thermal curve subsystem
+// ============================================================ //
+/*
+ * Overview
+ * --------
+ * The EC stores two independent fan curves (CPU and GPU) as consecutive byte
+ * arrays in its register space.  Each curve has N speed entries and (N-1)
+ * temperature thresholds:
+ *
+ *   EC layout:  s0 | s1 | ... | s(N-1)    (speed bytes, 0-150 %)
+ *               t1 | t2 | ... | t(N-1)    (temperature thresholds, 1-100 °C)
+ *
+ * The first speed (s0) is used for temperatures below t1; there is no t0.
+ *
+ * Sysfs interface
+ * ---------------
+ * /sys/devices/platform/msi-ec/cpu/curve
+ * /sys/devices/platform/msi-ec/gpu/curve
+ *
+ * Both files are read/write.  The format is a single space-separated line:
+ *   s0 t1 s1 t2 s2 ... t(N-1) s(N-1)
+ *
+ * Example for a 7-step curve:
+ *   echo "0 50 41 55 55 60 65 65 85 68 100 80 120" > /sys/.../cpu/curve
+ *
+ * Lazy / cached design
+ * --------------------
+ * The driver keeps a copy of the curve in kernel memory (curve_pack).  Reads
+ * pull from that cache (refreshed from EC when in advanced mode); writes update
+ * the cache and push to the EC only when advanced fan_mode is active.
+ *
+ * On devices with CURVE_APPLY_STRATEGY_RESET_ON_AUTO switching away from
+ * "advanced" fan_mode restores the factory defaults to the EC to avoid the
+ * broken-fan-speed bug (issue #138).  The user values remain cached and are
+ * re-applied when "advanced" is selected again.
+ */
+
+/*
+ * curve_pack - per-fan in-kernel curve state.
+ *
+ * @curve                  : pointer into the matching msi_ec_conf (CPU or GPU)
+ * @curve_fan_speed[]      : user-supplied (or EC-read) speed values
+ * @curve_temp[]           : user-supplied (or EC-read) temperature thresholds
+ * @curve_fan_speed_default[]: factory defaults, captured at module load
+ * @curve_temp_default[]   : factory temperature defaults, captured at load
+ */
+struct curve_pack {
+	struct msi_ec_fan_curve *curve;
+
+	u8 curve_fan_speed[CURVE_MAX_ENTRIES];
+	u8 curve_temp[CURVE_MAX_ENTRIES];
+
+	u8 curve_fan_speed_default[CURVE_MAX_ENTRIES];
+	u8 curve_temp_default[CURVE_MAX_ENTRIES];
+};
+
+/* Returns true if this curve_pack has been bound to an EC fan_curve config. */
+static inline int is_curve_initialized(struct curve_pack *cp)
+{
+	return cp != NULL && cp->curve != NULL;
+}
+
+/* Module-level storage for the two fan curve state machines. */
+static struct curve_pack cpu_curve_package = {0};
+static struct curve_pack gpu_curve_package = {0};
+
+/* Convenience accessor so iteration code can treat both curves uniformly. */
+#define ALL_CURVES_COUNT 2
+static struct curve_pack *all_curves[ALL_CURVES_COUNT] = {
+	&cpu_curve_package,
+	&gpu_curve_package,
+};
+
+/*
+ * is_curve_allowed() - Sanity-check an msi_ec_fan_curve config.
+ *
+ * Returns 1 if the curve config is usable (valid EC addresses, sane count).
+ * Returns 0 if the curve should be treated as absent/unsupported.
+ *
+ * Note: MSI_EC_ADDR_UNSUPP and MSI_EC_ADDR_UNKNOWN both equal 0xff01, so a
+ * single >0xff00 guard catches both sentinels without depending on which
+ * constant the config author chose.  Zero is also rejected because it would
+ * address EC register 0x00, which is never a valid curve start address.
+ */
+static int is_curve_allowed(struct msi_ec_fan_curve *curve)
+{
+	if (!curve)
+		return 0;
+	if (curve->speed_start_address == 0 ||
+	    curve->speed_start_address > 0xff00)
+		return 0;
+	if (curve->temperature_start_address == 0 ||
+	    curve->temperature_start_address > 0xff00)
+		return 0;
+	if (curve->entries_count <= 0 ||
+	    curve->entries_count > CURVE_MAX_ENTRIES)
+		return 0;
+	return 1;
+}
+
+/*
+ * is_advanced_fan_mode() - Query whether "advanced" fan mode is currently set.
+ *
+ * Returns 1 if yes, 0 if another mode is active, negative errno on error.
+ */
+static int is_advanced_fan_mode(void)
+{
+	u8 rdata;
+	int result = ec_read(conf.fan_mode.address, &rdata);
+
+	if (result < 0)
+		return result;
+
+	for (int i = 0; conf.fan_mode.modes[i].name; i++) {
+		if (rdata == conf.fan_mode.modes[i].value)
+			return !strcmp(conf.fan_mode.modes[i].name,
+				       FM_ADVANCED_NAME);
+	}
+	return 0;
+}
+
+/* ---- EC read/write helpers ---- */
+
+/*
+ * pull_ec_curve() - Read a fan curve from EC registers into caller buffers.
+ *
+ * Reads @curve->entries_count speed bytes and (@entries_count - 1) temperature
+ * bytes from the EC into @fan_speed_buf and @temperature_buf respectively.
+ * Returns 0 on success, negative errno on failure.
+ */
+static int pull_ec_curve(struct msi_ec_fan_curve *curve,
+			 u8 fan_speed_buf[CURVE_MAX_ENTRIES],
+			 u8 temperature_buf[CURVE_MAX_ENTRIES])
+{
+	if (!is_curve_allowed(curve))
+		return -EINVAL;
+
+	/* Read N speed entries starting at speed_start_address. */
+	for (int i = 0; i < curve->entries_count; i++) {
+		if (ec_read(curve->speed_start_address + i, &fan_speed_buf[i]))
+			return -EIO;
+	}
+
+	/* Read (N-1) temperature thresholds (no t0 in EC). */
+	for (int i = 0; i < curve->entries_count - 1; i++) {
+		if (ec_read(curve->temperature_start_address + i,
+			    &temperature_buf[i]))
+			return -EIO;
+	}
+
+	return 0;
+}
+
+/*
+ * write_ec_curve() - Write a fan curve from caller buffers into EC registers.
+ *
+ * Mirrors pull_ec_curve(); always writes @entries_count speeds and
+ * (@entries_count - 1) temperatures.
+ * Returns 0 on success, negative errno on failure.
+ */
+static int write_ec_curve(struct msi_ec_fan_curve *curve,
+			  const u8 fan_speed_buf[CURVE_MAX_ENTRIES],
+			  const u8 temperature_buf[CURVE_MAX_ENTRIES])
+{
+	if (!is_curve_allowed(curve))
+		return -EINVAL;
+
+	for (int i = 0; i < curve->entries_count; i++) {
+		if (ec_write(curve->speed_start_address + i, fan_speed_buf[i]))
+			return -EIO;
+	}
+
+	for (int i = 0; i < curve->entries_count - 1; i++) {
+		if (ec_write(curve->temperature_start_address + i,
+			     temperature_buf[i]))
+			return -EIO;
+	}
+
+	return 0;
+}
+
+/*
+ * pull_ec_curve_safe() - Conditionally refresh the in-memory curve from EC.
+ *
+ * If the curve uses RESET_ON_AUTO strategy and we are NOT in advanced mode,
+ * the EC currently holds the factory defaults — do nothing (return 0 early)
+ * to avoid overwriting the cached user values with those defaults.
+ *
+ * In all other cases delegates to pull_ec_curve().
+ */
+static int pull_ec_curve_safe(struct msi_ec_fan_curve *curve,
+			      u8 fan_speed_buf[CURVE_MAX_ENTRIES],
+			      u8 temperature_buf[CURVE_MAX_ENTRIES])
+{
+	int adv = is_advanced_fan_mode();
+
+	if (adv < 0)
+		return adv;
+
+	if (!adv && curve->apply_strategy == CURVE_APPLY_STRATEGY_RESET_ON_AUTO)
+		return 0; /* EC has defaults; keep cached user values intact */
+
+	return pull_ec_curve(curve, fan_speed_buf, temperature_buf);
+}
+
+/*
+ * write_ec_curve_safe() - Conditionally push the in-memory curve to EC.
+ *
+ * Same guard as pull_ec_curve_safe(): if we are not in advanced mode and the
+ * strategy is RESET_ON_AUTO, skip the write (the user values are cached and
+ * will be pushed when "advanced" is selected).
+ */
+static int write_ec_curve_safe(struct msi_ec_fan_curve *curve,
+			       const u8 fan_speed_buf[CURVE_MAX_ENTRIES],
+			       const u8 temperature_buf[CURVE_MAX_ENTRIES])
+{
+	int adv = is_advanced_fan_mode();
+
+	if (adv < 0)
+		return adv;
+
+	if (!adv && curve->apply_strategy == CURVE_APPLY_STRATEGY_RESET_ON_AUTO)
+		return 0;
+
+	return write_ec_curve(curve, fan_speed_buf, temperature_buf);
+}
+
+/* ---- Sysfs text serialisation ---- */
+
+/* Buffer size for a single printed curve line.
+ * Worst case: 16 entries × (3 digits + 1 space) = 64 bytes; 256 is generous. */
+#define PRINT_CURVE_BUFSIZE 256
+
+/*
+ * print_curve() - Format a curve into a sysfs output buffer.
+ *
+ * Produces the interleaved representation:
+ *   "s0 t1 s1 t2 s2 ... t(N-1) s(N-1)\n"
+ * where N = @entries.
+ *
+ * Note: there is no leading temperature because t0 is implicitly "below t1".
+ *
+ * Returns number of bytes written, or -ENOMEM if the buffer overflowed.
+ */
+static ssize_t print_curve(const u8 fan_speed_buf[CURVE_MAX_ENTRIES],
+			   const u8 temperature_buf[CURVE_MAX_ENTRIES],
+			   int entries, char *buf)
+{
+	char str[PRINT_CURVE_BUFSIZE];
+	int pos = 0;
+	int total_tokens = 2 * entries - 1; /* N speeds + (N-1) temps */
+	int sc = 0, tc = 0;
+
+	for (int j = 0; j < total_tokens; j++) {
+		if (j % 2 == 0) {
+			/* Even positions → speed */
+			pos += snprintf(str + pos, PRINT_CURVE_BUFSIZE - pos,
+					"%u ", fan_speed_buf[sc++]);
+		} else {
+			/* Odd positions → temperature threshold */
+			pos += snprintf(str + pos, PRINT_CURVE_BUFSIZE - pos,
+					"%u ", temperature_buf[tc++]);
+		}
+
+		if (pos >= PRINT_CURVE_BUFSIZE)
+			return -ENOMEM;
+	}
+
+	/* Replace trailing space with NUL so sysfs_emit adds a clean newline. */
+	if (pos > 0)
+		str[pos - 1] = '\0';
+
+	return sysfs_emit(buf, "%s\n", str);
+}
+
+/*
+ * read_curve() - Parse a sysfs curve string into speed and temperature buffers.
+ *
+ * Expects exactly (2*entries - 1) whitespace-separated integers on one line:
+ *   s0 t1 s1 t2 ... t(N-1) s(N-1)
+ *
+ * Validation rules:
+ *   - Temperatures must be strictly increasing and ≤ 100 °C.
+ *   - Fan speeds must be ≤ 150 % (MSI EC supports values above 100 for boost).
+ *   - No trailing garbage is accepted (other than a single newline).
+ *
+ * On success writes validated values into @fan_speed_buf / @temperature_buf
+ * and returns @count.  Returns negative errno on any parse or validation error.
+ */
+static ssize_t read_curve(u8 fan_speed_buf[CURVE_MAX_ENTRIES],
+			  u8 temperature_buf[CURVE_MAX_ENTRIES],
+			  int entries, const char *buf, size_t count)
+{
+	int total_tokens = 2 * entries - 1;
+	unsigned int data[2 * CURVE_MAX_ENTRIES];
+	const char *p = buf;
+	int offset;
+
+	/* Parse all tokens. */
+	for (int i = 0; i < total_tokens; i++) {
+		if (p >= buf + count)
+			return -EINVAL;
+		if (sscanf(p, "%u%n", &data[i], &offset) != 1)
+			return -EINVAL;
+		if (data[i] >= 256)
+			return -EINVAL;
+		p += offset;
+	}
+
+	/* Allow an optional trailing newline, then require end-of-input. */
+	if (p < buf + count && *p == '\n')
+		p++;
+	if (p != buf + count)
+		return -EINVAL;
+
+	/* Unpack interleaved tokens into separate speed/temperature arrays. */
+	u8 tmp_speed[CURVE_MAX_ENTRIES];
+	u8 tmp_temp[CURVE_MAX_ENTRIES];
+
+	for (int j = 0, sc = 0, tc = 0; j < total_tokens; j++) {
+		if (j % 2 == 0)
+			tmp_speed[sc++] = (u8)data[j];
+		else
+			tmp_temp[tc++] = (u8)data[j];
+	}
+
+	/* Validate: temperatures must be strictly monotonically increasing. */
+	int prev_temp = 0;
+
+	for (int i = 0; i < entries - 1; i++) {
+		if (prev_temp >= tmp_temp[i] || tmp_temp[i] > 100)
+			return -EINVAL;
+		prev_temp = tmp_temp[i];
+	}
+
+	/* Validate: fan speeds must not exceed the EC's supported maximum. */
+	for (int i = 0; i < entries; i++) {
+		if (tmp_speed[i] > 150)
+			return -EINVAL;
+	}
+
+	/* All checks passed — commit to caller buffers. */
+	for (int i = 0; i < entries; i++) {
+		fan_speed_buf[i] = tmp_speed[i];
+		temperature_buf[i] = tmp_temp[i];
+	}
+
+	return count;
+}
+
+/* ---- curve_pack operations ---- */
+
+/*
+ * curve_show() - Refresh cache from EC (if appropriate) and emit to sysfs.
+ */
+static ssize_t curve_show(struct curve_pack *cp, char *buf)
+{
+	int result = pull_ec_curve_safe(cp->curve,
+					cp->curve_fan_speed,
+					cp->curve_temp);
+	if (result < 0)
+		return result;
+
+	return print_curve(cp->curve_fan_speed, cp->curve_temp,
+			   cp->curve->entries_count, buf);
+}
+
+/*
+ * curve_store() - Parse a user-written curve, update cache, push to EC.
+ */
+static ssize_t curve_store(struct curve_pack *cp,
+			   const char *buf, size_t count)
+{
+	ssize_t result = read_curve(cp->curve_fan_speed, cp->curve_temp,
+				    cp->curve->entries_count, buf, count);
+	if (result < 0)
+		return result;
+
+	/* Push to EC only if the current fan mode allows it. */
+	int ec_result = write_ec_curve_safe(cp->curve,
+					    cp->curve_fan_speed,
+					    cp->curve_temp);
+	if (ec_result < 0)
+		return ec_result;
+
+	return result;
+}
+
+/*
+ * curve_init() - Bind a curve_pack to an EC fan_curve config at module load.
+ *
+ * Reads the current EC curve as factory defaults, then copies those values
+ * into the user buffer so an initial read reflects what the EC contains.
+ *
+ * Returns 0 on success, negative errno if the curve is unsupported or the
+ * EC read fails.
+ */
+static int curve_init(struct curve_pack *cp, struct msi_ec_fan_curve *curve)
+{
+	if (!is_curve_allowed(curve))
+		return -EINVAL;
+
+	cp->curve = curve;
+
+	int result = pull_ec_curve(cp->curve,
+				   cp->curve_fan_speed_default,
+				   cp->curve_temp_default);
+	if (result < 0) {
+		cp->curve = NULL; /* mark as uninitialized on failure */
+		return result;
+	}
+
+	/* Initialise user-facing buffers to the factory values. */
+	for (int i = 0; i < CURVE_MAX_ENTRIES; i++) {
+		cp->curve_fan_speed[i] = cp->curve_fan_speed_default[i];
+		cp->curve_temp[i]      = cp->curve_temp_default[i];
+	}
+
+	return 0;
+}
+
+/*
+ * curve_destroy() - Restore factory defaults to EC and unbind the curve_pack.
+ *
+ * Called on module unload.  Writes the original values back to the EC so the
+ * firmware is left in a clean state, then clears the curve pointer.
+ */
+static void curve_destroy(struct curve_pack *cp)
+{
+	if (!is_curve_initialized(cp))
+		return;
+
+	/* Best-effort restore; ignore errors (module is being removed). */
+	write_ec_curve(cp->curve,
+		       cp->curve_fan_speed_default,
+		       cp->curve_temp_default);
+
+	for (int i = 0; i < CURVE_MAX_ENTRIES; i++) {
+		cp->curve_fan_speed[i] = cp->curve_fan_speed_default[i];
+		cp->curve_temp[i]      = cp->curve_temp_default[i];
+	}
+
+	cp->curve = NULL;
+}
+
+/* Thin wrappers so msi_ec_init/exit don't need to know about curve_pack internals. */
+static int cpu_curve_init(void)
+{
+	return curve_init(&cpu_curve_package, &conf.cpu.fan_curve);
+}
+
+static void cpu_curve_destroy(void)
+{
+	curve_destroy(&cpu_curve_package);
+}
+
+static int gpu_curve_init(void)
+{
+	return curve_init(&gpu_curve_package, &conf.gpu.fan_curve);
+}
+
+static void gpu_curve_destroy(void)
+{
+	curve_destroy(&gpu_curve_package);
+}
+
+/* ---- Sysfs show/store callbacks for cpu/curve and gpu/curve ---- */
+
+static ssize_t dev_attr_cpu_curve_show(struct device *dev,
+					struct device_attribute *attr,
+					char *buf)
+{
+	if (!is_curve_initialized(&cpu_curve_package))
+		return -EINVAL;
+	return curve_show(&cpu_curve_package, buf);
+}
+
+static ssize_t dev_attr_cpu_curve_store(struct device *dev,
+					struct device_attribute *attr,
+					const char *buf, size_t count)
+{
+	if (!is_curve_initialized(&cpu_curve_package))
+		return -EINVAL;
+	return curve_store(&cpu_curve_package, buf, count);
+}
+
+static ssize_t dev_attr_gpu_curve_show(struct device *dev,
+					struct device_attribute *attr,
+					char *buf)
+{
+	if (!is_curve_initialized(&gpu_curve_package))
+		return -EINVAL;
+	return curve_show(&gpu_curve_package, buf);
+}
+
+static ssize_t dev_attr_gpu_curve_store(struct device *dev,
+					struct device_attribute *attr,
+					const char *buf, size_t count)
+{
+	if (!is_curve_initialized(&gpu_curve_package))
+		return -EINVAL;
+	return curve_store(&gpu_curve_package, buf, count);
+}
+
+/*
+ * The "curve" sysfs attribute appears as:
+ *   /sys/devices/platform/msi-ec/cpu/curve
+ *   /sys/devices/platform/msi-ec/gpu/curve
+ *
+ * Both are mode 0644 (root-readable, root-writable).
+ * They are placed in separate struct device_attribute objects so each fan
+ * group can have its own "curve" name without collision.
+ */
+static struct device_attribute dev_attr_cpu_curve = {
+	.attr  = { .name = "curve", .mode = 0644 },
+	.show  = dev_attr_cpu_curve_show,
+	.store = dev_attr_cpu_curve_store,
+};
+
+static struct device_attribute dev_attr_gpu_curve = {
+	.attr  = { .name = "curve", .mode = 0644 },
+	.show  = dev_attr_gpu_curve_show,
+	.store = dev_attr_gpu_curve_store,
+};
+
+/*
+ * curve_fan_mode_change() - React to a fan mode change.
+ *
+ * Called from fan_mode_store() before the new mode is written to the EC.
+ *
+ * For curves using CURVE_APPLY_STRATEGY_RESET_ON_AUTO:
+ *  - Switching TO "advanced": push the cached user curve to the EC.
+ *  - Switching AWAY: save the current EC values back to the cache (in case
+ *    the user read the curve while in advanced mode), then restore defaults.
+ *
+ * For CURVE_APPLY_STRATEGY_NORMAL the curve is always in the EC; nothing to do.
+ *
+ * Returns 0 on success, negative errno on EC I/O failure.
+ */
+static int curve_fan_mode_change(const char *mode)
+{
+	int going_advanced = !strcmp(mode, FM_ADVANCED_NAME);
+
+	for (int i = 0; i < ALL_CURVES_COUNT; i++) {
+		struct curve_pack *cp = all_curves[i];
+
+		if (!is_curve_initialized(cp))
+			continue;
+
+		if (cp->curve->apply_strategy != CURVE_APPLY_STRATEGY_RESET_ON_AUTO)
+			continue;
+
+		int result;
+
+		if (going_advanced) {
+			/* Apply user-supplied (or default) curve to the EC. */
+			result = write_ec_curve(cp->curve,
+						cp->curve_fan_speed,
+						cp->curve_temp);
+		} else {
+			/*
+			 * We are leaving advanced mode.  Pull the current EC
+			 * values into cache first (the user may have changed the
+			 * curve from another tool), then restore factory defaults
+			 * to prevent the broken-fan-speed bug.
+			 */
+			pull_ec_curve(cp->curve,
+				      cp->curve_fan_speed,
+				      cp->curve_temp);
+			result = write_ec_curve(cp->curve,
+						cp->curve_fan_speed_default,
+						cp->curve_temp_default);
+		}
+
+		if (result < 0)
+			return result;
+	}
+
+	return 0;
+}
 
 // ============================================================ //
 // Sysfs platform device attributes (debug)
@@ -2874,12 +3704,19 @@ static umode_t msi_ec_is_visible(struct kobject *kobj,
 	else if (attr == &dev_attr_cpu_realtime_fan_speed.attr)
 		address = conf.cpu.rt_fan_speed_address;
 
+	else if (attr == &dev_attr_cpu_curve.attr)
+		/* Show the curve attribute only if the EC curve is configured. */
+		return is_curve_allowed(&conf.cpu.fan_curve) ? attr->mode : 0;
+
 	/* gpu group */
 	else if (attr == &dev_attr_gpu_realtime_temperature.attr)
 		address = conf.gpu.rt_temp_address;
 
 	else if (attr == &dev_attr_gpu_realtime_fan_speed.attr)
 		address = conf.gpu.rt_fan_speed_address;
+
+	else if (attr == &dev_attr_gpu_curve.attr)
+		return is_curve_allowed(&conf.gpu.fan_curve) ? attr->mode : 0;
 
 	/* default */
 	else
@@ -3042,6 +3879,15 @@ static int __init msi_ec_init(void)
 		led_classdev_register(&msi_platform_device->dev,
 				      &msiacpi_led_kbdlight);
 
+	/*
+	 * Initialise fan curve subsystem.  Failures are non-fatal: if the EC
+	 * addresses are wrong or unsupported, is_curve_allowed() returns false
+	 * and curve_init() returns -EINVAL, which we silently ignore here so
+	 * the rest of the driver continues to work normally.
+	 */
+	cpu_curve_init();
+	gpu_curve_init();
+
 	return 0;
 }
 
@@ -3064,6 +3910,14 @@ static void __exit msi_ec_exit(void)
 
 	platform_device_unregister(msi_platform_device);
 	platform_driver_unregister(&msi_platform_driver);
+
+	/*
+	 * Restore EC fan curves to factory defaults.  Must happen after the
+	 * platform device is torn down (sysfs attrs are gone) but the EC is
+	 * still accessible.
+	 */
+	cpu_curve_destroy();
+	gpu_curve_destroy();
 
 	pr_info("module_exit\n");
 }
