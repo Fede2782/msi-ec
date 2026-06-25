@@ -2449,6 +2449,44 @@ static ssize_t win_key_store(struct device *dev, struct device_attribute *attr,
 	return count;
 }
 
+static ssize_t fn_win_swap_show(struct device *device, 
+                            struct device_attribute *attr, char *buf)
+{
+        int result;
+        bool value;
+
+        result = ec_check_bit(conf.fn_win_swap.address, conf.fn_win_swap.bit, &value);
+        if (result < 0)
+                return result;
+
+        value ^= conf.fn_win_swap.invert; // invert the direction for some laptops
+        value = !value; // the bit is true when the win key in on the left which this should show off
+
+        return sysfs_emit(buf, "%s\n", str_on_off(value));
+}
+
+static ssize_t fn_win_swap_store(struct device *dev, struct device_attribute *attr,
+                             const char *buf, size_t count)
+{
+        int result;
+        bool value;
+
+        result = kstrtobool(buf, &value);
+        if (result < 0)
+                return result;
+
+        value ^= conf.fn_win_swap.invert; // invert the direction for some laptops
+        value = !value; // the bit is true when the win key in on the left which this should show off
+
+        result = ec_set_bit(conf.fn_win_swap.address, conf.fn_win_swap.bit, value);
+
+        if (result < 0)
+                return result;
+
+        return count;
+}
+
+
 static ssize_t cooler_boost_show(struct device *device,
 				 struct device_attribute *attr, char *buf)
 {
@@ -2729,6 +2767,7 @@ static DEVICE_ATTR_RW(webcam);
 static DEVICE_ATTR_RW(webcam_block);
 static DEVICE_ATTR_RW(fn_key);
 static DEVICE_ATTR_RW(win_key);
+static DEVICE_ATTR_RW(fn_win_swap);
 static DEVICE_ATTR_RW(cooler_boost);
 static DEVICE_ATTR_RW(usb_powershare);
 static DEVICE_ATTR_RO(available_shift_modes);
@@ -2744,6 +2783,7 @@ static struct attribute *msi_root_attrs[] = {
 	&dev_attr_webcam_block.attr,
 	&dev_attr_fn_key.attr,
 	&dev_attr_win_key.attr,
+        &dev_attr_fn_win_swap.attr,
 	&dev_attr_cooler_boost.attr,
 	&dev_attr_usb_powershare.attr,
 	&dev_attr_available_shift_modes.attr,
@@ -3187,7 +3227,8 @@ static umode_t msi_ec_is_visible(struct kobject *kobj,
 		address = conf.webcam.block_address;
 
 	else if (attr == &dev_attr_fn_key.attr ||
-		 attr == &dev_attr_win_key.attr)
+		 attr == &dev_attr_win_key.attr ||
+                 attr == &dev_attr_fn_win_swap.attr)
 		address = conf.fn_win_swap.address;
 
 	else if (attr == &dev_attr_cooler_boost.attr)
