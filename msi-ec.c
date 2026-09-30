@@ -39,6 +39,7 @@
 #include <linux/version.h>
 #include <linux/rtc.h>
 #include <linux/string_choices.h>
+#include <linux/workqueue.h>
 
 static DEFINE_MUTEX(ec_set_by_mask_mutex);
 static DEFINE_MUTEX(ec_unset_by_mask_mutex);
@@ -2031,6 +2032,10 @@ static bool debug = false;
 module_param(debug, bool, 0);
 MODULE_PARM_DESC(debug, "Load the driver in the debug mode, exporting the debug attributes");
 
+static uint kbd_bl_poll_interval = 100;
+module_param(kbd_bl_poll_interval, uint, 0644);
+MODULE_PARM_DESC(kbd_bl_poll_interval, "Keyboard backlight EC polling interval in milliseconds (default: 100, 0 to disable)");
+
 // ============================================================ //
 // Helper functions
 // ============================================================ //
@@ -3060,6 +3065,11 @@ static int mute_led_sysfs_set(struct led_classdev *led_cdev,
 	return 0;
 }
 
+static DEFINE_MUTEX(kbd_bl_mutex);
+static struct delayed_work kbd_bl_poll_work;
+static enum led_brightness kbd_bl_cached_brightness = 0;
+static bool kbd_bl_work_active = false;
+
 static enum led_brightness kbd_bl_sysfs_get(struct led_classdev *led_cdev)
 {
 	u8 rdata;
@@ -3072,16 +3082,26 @@ static enum led_brightness kbd_bl_sysfs_get(struct led_classdev *led_cdev)
 static int kbd_bl_sysfs_set(struct led_classdev *led_cdev,
 			    enum led_brightness brightness)
 {
+	u8 wdata;
+	int result;
+
 	// By default, on an unregister event,
 	// kernel triggers the setter with 0 brightness.
 	if (led_cdev->flags & LED_UNREGISTERING)
 		return 0;
 
-	u8 wdata;
 	if (brightness < 0 || brightness > 3)
-		return -1;
+		return -EINVAL;
+
 	wdata = conf.kbd_bl.state_base_value | brightness;
-	return ec_write(conf.kbd_bl.bl_state_address, wdata);
+
+	mutex_lock(&kbd_bl_mutex);
+	result = ec_write(conf.kbd_bl.bl_state_address, wdata);
+	if (result == 0)
+		kbd_bl_cached_brightness = brightness;
+	mutex_unlock(&kbd_bl_mutex);
+
+	return result;
 }
 
 static ssize_t available_kbd_bl_modes_show(struct device *device,
@@ -3205,6 +3225,38 @@ static struct led_classdev msiacpi_led_kbdlight = {
 	.brightness_get = &kbd_bl_sysfs_get,
 	.groups = kbd_bl_groups,
 };
+
+static void kbd_bl_poll_worker(struct work_struct *work)
+{
+	u8 rdata;
+	int result;
+	enum led_brightness hw_brightness = 0;
+	bool notify = false;
+
+	mutex_lock(&kbd_bl_mutex);
+	if (!kbd_bl_work_active) {
+		mutex_unlock(&kbd_bl_mutex);
+		return;
+	}
+
+	result = ec_read(conf.kbd_bl.bl_state_address, &rdata);
+	if (result == 0) {
+		hw_brightness = rdata & MSI_EC_KBD_BL_STATE_MASK;
+		if (hw_brightness != kbd_bl_cached_brightness) {
+			kbd_bl_cached_brightness = hw_brightness;
+			notify = true;
+		}
+	}
+
+	if (kbd_bl_work_active && kbd_bl_poll_interval > 0)
+		schedule_delayed_work(&kbd_bl_poll_work,
+				      msecs_to_jiffies(kbd_bl_poll_interval));
+	mutex_unlock(&kbd_bl_mutex);
+
+	if (notify)
+		led_classdev_notify_brightness_hw_changed(&msiacpi_led_kbdlight,
+							  hw_brightness);
+}
 
 // ============================================================ //
 // Sysfs platform driver
@@ -3419,9 +3471,27 @@ static int __init msi_ec_init(void)
 		led_classdev_register(&msi_platform_device->dev,
 				      &mute_led_cdev);
 
-	if (conf.kbd_bl.bl_state_address != MSI_EC_ADDR_UNSUPP)
-		led_classdev_register(&msi_platform_device->dev,
-				      &msiacpi_led_kbdlight);
+	if (conf.kbd_bl.bl_state_address != MSI_EC_ADDR_UNSUPP) {
+		u8 rdata;
+
+		if (ec_read(conf.kbd_bl.bl_state_address, &rdata) == 0)
+			kbd_bl_cached_brightness = rdata & MSI_EC_KBD_BL_STATE_MASK;
+		else
+			kbd_bl_cached_brightness = 0;
+
+		INIT_DELAYED_WORK(&kbd_bl_poll_work, kbd_bl_poll_worker);
+
+		result = led_classdev_register(&msi_platform_device->dev,
+					      &msiacpi_led_kbdlight);
+		if (result == 0) {
+			kbd_bl_work_active = true;
+			led_classdev_notify_brightness_hw_changed(&msiacpi_led_kbdlight,
+								  kbd_bl_cached_brightness);
+			if (kbd_bl_poll_interval > 0)
+				schedule_delayed_work(&kbd_bl_poll_work,
+						      msecs_to_jiffies(kbd_bl_poll_interval));
+		}
+	}
 
 	return 0;
 }
@@ -3436,8 +3506,15 @@ static void __exit msi_ec_exit(void)
 		if (conf.leds.mute_led_address != MSI_EC_ADDR_UNSUPP)
 			led_classdev_unregister(&mute_led_cdev);
 
-		if (conf.kbd_bl.bl_state_address != MSI_EC_ADDR_UNSUPP)
+		if (conf.kbd_bl.bl_state_address != MSI_EC_ADDR_UNSUPP) {
+			if (kbd_bl_work_active) {
+				mutex_lock(&kbd_bl_mutex);
+				kbd_bl_work_active = false;
+				mutex_unlock(&kbd_bl_mutex);
+				cancel_delayed_work_sync(&kbd_bl_poll_work);
+			}
 			led_classdev_unregister(&msiacpi_led_kbdlight);
+		}
 
 		if (charge_control_supported)
 			battery_hook_unregister(&battery_hook);
