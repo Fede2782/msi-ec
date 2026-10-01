@@ -2305,6 +2305,29 @@ unlock:
 	return result;
 }
 
+/*
+ * Replaces only the bits selected by mask, keeping the other bits of the byte.
+ * Uses the same lock as ec_set_bit(), because the bytes written here can
+ * also hold single-bit settings (e.g. LEDs).
+ */
+static int ec_write_masked(u8 addr, u8 mask, u8 value)
+{
+	int result;
+	u8 stored;
+
+	mutex_lock(&ec_set_bit_mutex);
+	result = ec_read(addr, &stored);
+	if (result < 0)
+		goto unlock;
+
+	stored = (stored & ~mask) | (value & mask);
+	result = ec_write(addr, stored);
+
+unlock:
+	mutex_unlock(&ec_set_bit_mutex);
+	return result;
+}
+
 static int ec_check_bit(u8 addr, u8 bit, bool *output)
 {
 	int result;
@@ -3956,6 +3979,21 @@ static ssize_t available_kbd_bl_modes_show(struct device *device,
 	return count;
 }
 
+/*
+ * The backlight mode byte is shared with other settings on some devices
+ * (e.g. the micmute LED on G2_0), so only the bits used by the mode values
+ * belong to the mode.
+ */
+static u8 kbd_bl_mode_mask(void)
+{
+	u8 mask = 0;
+
+	for (int i = 0; conf.kbd_bl.bl_modes[i].name; i++)
+		mask |= conf.kbd_bl.bl_modes[i].value;
+
+	return mask;
+}
+
 static ssize_t kbd_bl_mode_show(struct device *device,
 			     struct device_attribute *attr, char *buf)
 {
@@ -3965,6 +4003,9 @@ static ssize_t kbd_bl_mode_show(struct device *device,
 	result = ec_read(conf.kbd_bl.bl_mode_address, &rdata);
 	if (result < 0)
 		return result;
+
+	// ignore the bits that belong to other settings
+	rdata &= kbd_bl_mode_mask();
 
 	for (int i = 0; conf.kbd_bl.bl_modes[i].name; i++) {
 		// NULL entries have NULL name
@@ -3986,8 +4027,10 @@ static ssize_t kbd_bl_mode_store(struct device *dev, struct device_attribute *at
 		// NULL entries have NULL name
 
 		if (sysfs_streq(conf.kbd_bl.bl_modes[i].name, buf)) {
-			result = ec_write(conf.kbd_bl.bl_mode_address,
-					  conf.kbd_bl.bl_modes[i].value);
+			// keep the bits that belong to other settings
+			result = ec_write_masked(conf.kbd_bl.bl_mode_address,
+						 kbd_bl_mode_mask(),
+						 conf.kbd_bl.bl_modes[i].value);
 			if (result < 0)
 				return result;
 
