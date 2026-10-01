@@ -116,10 +116,18 @@ static struct msi_ec_conf CONF_G1_0 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.leds = {
 		.micmute_led_address = 0x2b,
@@ -209,10 +217,18 @@ static struct msi_ec_conf CONF_G1_1 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.leds = {
 		.micmute_led_address = MSI_EC_ADDR_UNSUPP,
@@ -288,10 +304,18 @@ static struct msi_ec_conf CONF_G1_2 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.leds = {
 		.micmute_led_address = 0x2b,
@@ -382,10 +406,18 @@ static struct msi_ec_conf CONF_G1_3 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.leds = {
 		.micmute_led_address = MSI_EC_ADDR_UNSUPP,
@@ -461,10 +493,18 @@ static struct msi_ec_conf CONF_G1_4 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.leds = {
 		.micmute_led_address = MSI_EC_ADDR_UNSUPP,
@@ -543,10 +583,18 @@ static struct msi_ec_conf CONF_G1_5 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = MSI_EC_ADDR_UNSUPP,
 		.rt_fan_speed_address = MSI_EC_ADDR_UNSUPP,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.leds = {
 		.micmute_led_address = 0x2b,
@@ -630,10 +678,18 @@ static struct msi_ec_conf CONF_G1_6 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = MSI_EC_ADDR_UNSUPP,
 		.rt_fan_speed_address = MSI_EC_ADDR_UNSUPP,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.leds = {
 		.micmute_led_address = 0x2b,
@@ -721,10 +777,18 @@ static struct msi_ec_conf CONF_G1_7 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.leds = {
 		.micmute_led_address = MSI_EC_ADDR_UNSUPP,
@@ -797,10 +861,18 @@ static struct msi_ec_conf CONF_G1_8 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.leds = {
 		.micmute_led_address = MSI_EC_ADDR_UNSUPP,
@@ -879,10 +951,18 @@ static struct msi_ec_conf CONF_G1_9 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.leds = {
 		.micmute_led_address = MSI_EC_ADDR_UNSUPP,
@@ -955,10 +1035,18 @@ static struct msi_ec_conf CONF_G1_10 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.leds = {
 		.micmute_led_address = MSI_EC_ADDR_UNSUPP,
@@ -1038,10 +1126,18 @@ static struct msi_ec_conf CONF_G1_11 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.leds = {
 		.micmute_led_address = 0x2b,
@@ -1115,10 +1211,18 @@ static struct msi_ec_conf CONF_G1_13 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.leds = {
 		.micmute_led_address = 0x2b,
@@ -1209,10 +1313,20 @@ static struct msi_ec_conf CONF_G2_0 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = 0x72, // s0 .. s6
+			.temperature_start_address = 0x6a, // t1 .. t6
+			.entries_count             = 7,
+			.apply_strategy            = MSI_EC_FAN_CURVE_APPLY_RESET_ON_AUTO,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = MSI_EC_ADDR_UNSUPP,
 		.rt_fan_speed_address = MSI_EC_ADDR_UNSUPP,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.leds = {
 		.micmute_led_address = 0x2c,
@@ -1341,10 +1455,18 @@ static struct msi_ec_conf CONF_G2_1 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.leds = {
 		.micmute_led_address = 0x2c,
@@ -1441,10 +1563,18 @@ static struct msi_ec_conf CONF_G2_2 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.leds = {
 		.micmute_led_address = MSI_EC_ADDR_UNSUPP,
@@ -1546,10 +1676,18 @@ static struct msi_ec_conf CONF_G2_3 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = MSI_EC_ADDR_UNSUPP,
 		.rt_fan_speed_address = MSI_EC_ADDR_UNSUPP,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.leds = {
 		.micmute_led_address = 0x2c, // not present on `14F1`
@@ -1624,10 +1762,18 @@ static struct msi_ec_conf CONF_G2_4 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.leds = {
 		.micmute_led_address = 0x2c,
@@ -1708,10 +1854,18 @@ static struct msi_ec_conf CONF_G2_5 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.leds = {
 		.micmute_led_address = 0x2c,
@@ -1800,10 +1954,18 @@ static struct msi_ec_conf CONF_G2_6 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.leds = {
 		.micmute_led_address = MSI_EC_ADDR_UNSUPP,
@@ -1965,10 +2127,18 @@ static struct msi_ec_conf CONF_G2_10 __initdata = {
 	.cpu = {
 		.rt_temp_address      = 0x68,
 		.rt_fan_speed_address = 0x71,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.gpu = {
 		.rt_temp_address      = 0x80,
 		.rt_fan_speed_address = 0x89,
+		.fan_curve = {
+			.speed_start_address       = MSI_EC_ADDR_UNSUPP,
+			.temperature_start_address = MSI_EC_ADDR_UNSUPP,
+		},
 	},
 	.leds = {
 		.micmute_led_address = 0x2c,
@@ -2045,6 +2215,18 @@ static int ec_read_seq(u8 addr, u8 *buf, u8 len)
 	int result;
 	for (u8 i = 0; i < len; i++) {
 		result = ec_read(addr + i, buf + i);
+		if (result < 0)
+			return result;
+	}
+	return 0;
+}
+
+static int ec_write_seq(u8 addr, const u8 *buf, u8 len)
+{
+	int result;
+
+	for (u8 i = 0; i < len; i++) {
+		result = ec_write(addr + i, buf[i]);
 		if (result < 0)
 			return result;
 	}
@@ -2318,6 +2500,611 @@ static struct acpi_battery_hook battery_hook = {
 	.remove_battery = msi_battery_remove,
 	.name = MSI_EC_DRIVER_NAME,
 };
+
+// ============================================================ //
+// Fan curve
+// ============================================================ //
+
+/*
+ * Overview
+ *
+ * The driver exposes the cpu/curve and gpu/curve attributes. Each one is
+ * created only if the loaded configuration supports that curve, so a
+ * device gets zero, one or two curve attributes.
+ *
+ * Text format, used both for reading and writing:
+ *
+ *   s0 t1 s1 t2 s2 ... t(N-1) s(N-1)
+ *
+ * s* are fan speeds in %, t* are temperatures in degrees Celsius and N is
+ * the entries_count of the configuration. There is no t0: s0 is used for
+ * every temperature below t1. The whole curve is written at once, so it is
+ * validated and applied atomically.
+ *
+ * The driver keeps two copies of each curve in memory:
+ *   - defaults: the curve found in the EC when the module was loaded;
+ *   - custom:   the curve requested by the user (initially the defaults).
+ *
+ * Whether the custom curve is actually stored in the EC depends on the
+ * apply strategy of the configuration:
+ *   - NORMAL:        always;
+ *   - RESET_ON_AUTO: only while the fan mode is "advanced". In every other
+ *                    fan mode the EC holds the defaults, and the custom
+ *                    curve waits in memory until "advanced" is selected.
+ *
+ * While the custom curve is stored in the EC, the EC is the source of
+ * truth: reading the attribute refreshes the in-memory copy from the EC,
+ * so changes made by other tools are reported correctly.
+ *
+ * Suspend/resume: the firmware may reset the curve in the EC to its
+ * defaults during a sleep cycle, so the driver writes the expected curve
+ * back on resume (see fan_curves_restore()).
+ *
+ * Module unload: the defaults are written back, so no custom curve is
+ * left in the EC once the driver is no longer there to manage it.
+ *
+ * Locking: fan_curve_mutex serialises every access to the curve state and
+ * to the curve area of the EC, including the fan mode changes.
+ */
+
+/* Validation limits, the same as the ones used by MsiControllerLib. */
+#define FAN_CURVE_TEMP_MAX        100 // temperatures must be in 1..100
+#define FAN_CURVE_SPEED_MAX       150 // fan speeds must be in 0..150
+#define FAN_CURVE_LAST_SPEED_MIN   85 // safety floor for the last fan speed
+
+/* Longest accepted input, far more than any valid curve needs. */
+#define FAN_CURVE_TEXT_MAX        256
+
+/* Curve values, laid out as in the EC memory. */
+struct fan_curve_points {
+	u8 speeds[MSI_EC_FAN_CURVE_MAX_ENTRIES]; // s0 .. s(N-1)
+	u8 temps[MSI_EC_FAN_CURVE_MAX_ENTRIES];  // t1 .. t(N-1): temps[0] is t1
+};
+
+struct fan_curve {
+	const char *name; // "cpu" or "gpu", used in log messages
+
+	/*
+	 * Configuration of this curve, NULL while the curve is not available
+	 * (not supported by the device, failed to initialise or module unloaded).
+	 */
+	const struct msi_ec_fan_curve_conf *conf;
+
+	struct fan_curve_points defaults;
+	struct fan_curve_points custom;
+};
+
+static struct fan_curve cpu_fan_curve = { .name = "cpu" };
+static struct fan_curve gpu_fan_curve = { .name = "gpu" };
+
+static struct fan_curve *const fan_curves[] = {
+	&cpu_fan_curve,
+	&gpu_fan_curve,
+};
+
+static DEFINE_MUTEX(fan_curve_mutex);
+
+/*
+ * Finds the EC value of the "advanced" fan mode in the loaded
+ * configuration. Returns false if the configuration has no such mode.
+ */
+static bool fan_mode_get_advanced_value(int *value)
+{
+	if (conf.fan_mode.address == MSI_EC_ADDR_UNSUPP)
+		return false;
+
+	for (int i = 0; conf.fan_mode.modes[i].name; i++) {
+		// NULL entries have NULL name
+
+		if (!strcmp(conf.fan_mode.modes[i].name, FM_ADVANCED_NAME)) {
+			*value = conf.fan_mode.modes[i].value;
+			return true;
+		}
+	}
+
+	return false;
+}
+
+/*
+ * Reads the current fan mode from the EC and tells whether it is "advanced".
+ */
+static int fan_mode_is_advanced(bool *advanced)
+{
+	int advanced_value;
+	u8 rdata;
+	int result;
+
+	if (!fan_mode_get_advanced_value(&advanced_value)) {
+		*advanced = false;
+		return 0;
+	}
+
+	result = ec_read(conf.fan_mode.address, &rdata);
+	if (result < 0)
+		return result;
+
+	*advanced = (rdata == advanced_value);
+	return 0;
+}
+
+/*
+ * Checks that a curve configuration is complete and safe to use.
+ */
+static bool fan_curve_conf_is_supported(const struct msi_ec_fan_curve_conf *fc)
+{
+	int advanced_value;
+
+	// 0 is rejected too, in case a configuration leaves the fields unset
+	if (fc->speed_start_address == MSI_EC_ADDR_UNSUPP ||
+	    fc->speed_start_address == 0 ||
+	    fc->temperature_start_address == MSI_EC_ADDR_UNSUPP ||
+	    fc->temperature_start_address == 0)
+		return false;
+
+	// at least one temperature threshold, and no more than the buffers hold
+	if (fc->entries_count < 2 ||
+	    fc->entries_count > MSI_EC_FAN_CURVE_MAX_ENTRIES)
+		return false;
+
+	// both arrays must fit inside the 256 bytes of EC memory
+	if (fc->speed_start_address + fc->entries_count > 0x100 ||
+	    fc->temperature_start_address + (fc->entries_count - 1) > 0x100)
+		return false;
+
+	switch (fc->apply_strategy) {
+	case MSI_EC_FAN_CURVE_APPLY_NORMAL:
+		return true;
+
+	case MSI_EC_FAN_CURVE_APPLY_RESET_ON_AUTO:
+		// this strategy follows the fan mode, so "advanced" must exist
+		return fan_mode_get_advanced_value(&advanced_value);
+
+	default:
+		return false;
+	}
+}
+
+/*
+ * Reads a whole curve from the EC.
+ * On failure the output is left untouched.
+ */
+static int fan_curve_ec_read(const struct msi_ec_fan_curve_conf *fc,
+			     struct fan_curve_points *out)
+{
+	struct fan_curve_points points = {};
+	int result;
+
+	result = ec_read_seq(fc->speed_start_address, points.speeds,
+			     fc->entries_count);
+	if (result < 0)
+		return result;
+
+	result = ec_read_seq(fc->temperature_start_address, points.temps,
+			     fc->entries_count - 1);
+	if (result < 0)
+		return result;
+
+	*out = points;
+	return 0;
+}
+
+/*
+ * Writes a whole curve to the EC.
+ */
+static int fan_curve_ec_write(const struct msi_ec_fan_curve_conf *fc,
+			      const struct fan_curve_points *points)
+{
+	int result;
+
+	result = ec_write_seq(fc->speed_start_address, points->speeds,
+			      fc->entries_count);
+	if (result < 0)
+		return result;
+
+	return ec_write_seq(fc->temperature_start_address, points->temps,
+			    fc->entries_count - 1);
+}
+
+/*
+ * Tells whether the custom curve belongs in the EC in the given fan mode
+ * (otherwise the EC must hold the default curve).
+ */
+static bool fan_curve_custom_in_ec(const struct fan_curve *curve,
+				   bool advanced)
+{
+	if (curve->conf->apply_strategy == MSI_EC_FAN_CURVE_APPLY_RESET_ON_AUTO)
+		return advanced;
+
+	return true; // MSI_EC_FAN_CURVE_APPLY_NORMAL
+}
+
+/*
+ * Writes to the EC the curve that belongs there in the given fan mode:
+ * the custom curve or the default one.
+ */
+static int fan_curve_write_for_mode(struct fan_curve *curve, bool advanced)
+{
+	if (fan_curve_custom_in_ec(curve, advanced))
+		return fan_curve_ec_write(curve->conf, &curve->custom);
+
+	return fan_curve_ec_write(curve->conf, &curve->defaults);
+}
+
+/*
+ * Checks a curve given as "s0 t1 s1 ... t(N-1) s(N-1)" (2 * N - 1 values).
+ * The rules are the same as MsiControllerLib::isValidCurve():
+ *  - temperatures (odd indices) are strictly increasing, in 1..100;
+ *  - fan speeds (even indices) are non-decreasing, in 0..150;
+ *  - the last fan speed is at least 85.
+ */
+static bool fan_curve_values_are_valid(const int *values, int entries_count)
+{
+	int values_count = 2 * entries_count - 1;
+	int previous_temp = 0;
+	int previous_speed = 0;
+
+	for (int i = 1; i < values_count; i += 2) {
+		if (values[i] <= previous_temp || values[i] > FAN_CURVE_TEMP_MAX)
+			return false;
+		previous_temp = values[i];
+	}
+
+	for (int i = 0; i < values_count; i += 2) {
+		if (values[i] < previous_speed || values[i] > FAN_CURVE_SPEED_MAX)
+			return false;
+		previous_speed = values[i];
+	}
+
+	if (values[values_count - 1] < FAN_CURVE_LAST_SPEED_MIN)
+		return false;
+
+	return true;
+}
+
+/*
+ * Parses and validates a curve written by the user.
+ * The values are separated by spaces, tabs or newlines.
+ * On failure the output is left untouched.
+ */
+static int fan_curve_parse(const struct fan_curve *curve,
+			   const char *buf, size_t count,
+			   struct fan_curve_points *out)
+{
+	int entries_count = curve->conf->entries_count;
+	int expected_values = 2 * entries_count - 1;
+	int values[2 * MSI_EC_FAN_CURVE_MAX_ENTRIES - 1];
+	int found_values = 0;
+	char text[FAN_CURVE_TEXT_MAX];
+	char *cursor = text;
+	char *token;
+
+	// strsep() modifies the string, so work on a NUL-terminated copy
+	if (count >= sizeof(text))
+		return -EINVAL;
+	memcpy(text, buf, count);
+	text[count] = '\0';
+
+	// every token must be a decimal integer
+	while ((token = strsep(&cursor, " \t\n")) != NULL) {
+		if (*token == '\0')
+			continue; // empty token between two separators
+
+		if (found_values == expected_values)
+			return -EINVAL; // too many values
+
+		if (kstrtoint(token, 10, &values[found_values]) < 0)
+			return -EINVAL;
+
+		found_values++;
+	}
+
+	if (found_values != expected_values)
+		return -EINVAL; // too few values
+
+	if (!fan_curve_values_are_valid(values, entries_count))
+		return -EINVAL;
+
+	// even indices are fan speeds, odd indices are temperatures
+	*out = (struct fan_curve_points){};
+	for (int i = 0; i < entries_count; i++)
+		out->speeds[i] = values[2 * i];
+	for (int i = 0; i < entries_count - 1; i++)
+		out->temps[i] = values[2 * i + 1];
+
+	return 0;
+}
+
+/*
+ * Prints a curve as "s0 t1 s1 ... t(N-1) s(N-1)\n".
+ */
+static ssize_t fan_curve_print(const struct fan_curve *curve,
+			       const struct fan_curve_points *points,
+			       char *buf)
+{
+	int entries_count = curve->conf->entries_count;
+	int len;
+
+	len = sysfs_emit(buf, "%u", points->speeds[0]);
+	for (int i = 1; i < entries_count; i++)
+		len += sysfs_emit_at(buf, len, " %u %u",
+				     points->temps[i - 1], points->speeds[i]);
+	len += sysfs_emit_at(buf, len, "\n");
+
+	return len;
+}
+
+/*
+ * Backend of the cpu/curve and gpu/curve show callbacks.
+ */
+static ssize_t fan_curve_show(struct fan_curve *curve, char *buf)
+{
+	bool advanced;
+	ssize_t result;
+
+	mutex_lock(&fan_curve_mutex);
+
+	if (!curve->conf) {
+		result = -ENODEV;
+		goto unlock;
+	}
+
+	result = fan_mode_is_advanced(&advanced);
+	if (result < 0)
+		goto unlock;
+
+	// if the custom curve is stored in the EC, the EC is the source of truth
+	if (fan_curve_custom_in_ec(curve, advanced)) {
+		result = fan_curve_ec_read(curve->conf, &curve->custom);
+		if (result < 0)
+			goto unlock;
+	}
+
+	result = fan_curve_print(curve, &curve->custom, buf);
+
+unlock:
+	mutex_unlock(&fan_curve_mutex);
+	return result;
+}
+
+/*
+ * Backend of the cpu/curve and gpu/curve store callbacks.
+ */
+static ssize_t fan_curve_store(struct fan_curve *curve,
+			       const char *buf, size_t count)
+{
+	struct fan_curve_points new_curve;
+	bool advanced;
+	int result;
+
+	mutex_lock(&fan_curve_mutex);
+
+	if (!curve->conf) {
+		result = -ENODEV;
+		goto unlock;
+	}
+
+	result = fan_curve_parse(curve, buf, count, &new_curve);
+	if (result < 0)
+		goto unlock;
+
+	result = fan_mode_is_advanced(&advanced);
+	if (result < 0)
+		goto unlock;
+
+	// in the other fan modes the new curve only waits in memory
+	if (fan_curve_custom_in_ec(curve, advanced)) {
+		result = fan_curve_ec_write(curve->conf, &new_curve);
+		if (result < 0) {
+			// best effort: do not leave a half-written curve in the EC
+			fan_curve_ec_write(curve->conf, &curve->custom);
+			goto unlock;
+		}
+	}
+
+	curve->custom = new_curve;
+
+unlock:
+	mutex_unlock(&fan_curve_mutex);
+	return result < 0 ? result : count;
+}
+
+/*
+ * Tells whether at least one fan curve is available.
+ */
+static bool fan_curves_available(void)
+{
+	for (int i = 0; i < ARRAY_SIZE(fan_curves); i++) {
+		if (fan_curves[i]->conf)
+			return true;
+	}
+
+	return false;
+}
+
+/*
+ * Writes to the EC, for every available curve, the curve that belongs
+ * there in the given fan mode. The EC is not read first, so whatever it
+ * currently holds is overwritten.
+ * Every curve is tried even if one fails; the first error is returned.
+ * Must be called with fan_curve_mutex held.
+ */
+static int fan_curves_write_for_mode(bool advanced)
+{
+	int first_error = 0;
+
+	for (int i = 0; i < ARRAY_SIZE(fan_curves); i++) {
+		struct fan_curve *curve = fan_curves[i];
+		int result;
+
+		if (!curve->conf)
+			continue;
+
+		result = fan_curve_write_for_mode(curve, advanced);
+		if (result < 0 && first_error == 0)
+			first_error = result;
+	}
+
+	return first_error;
+}
+
+/*
+ * Puts every available curve in the state required by the next fan mode.
+ * Must be called with fan_curve_mutex held, before the new fan mode is
+ * written, so the EC never runs a non-advanced mode with a custom curve
+ * on RESET_ON_AUTO devices.
+ */
+static int fan_curves_prepare_mode_change(bool was_advanced,
+					  bool will_be_advanced)
+{
+	for (int i = 0; i < ARRAY_SIZE(fan_curves); i++) {
+		struct fan_curve *curve = fan_curves[i];
+		int result;
+
+		if (!curve->conf)
+			continue;
+
+		// the custom curve is about to leave the EC: save it first, so
+		// changes made by other tools while it was in the EC are kept
+		if (fan_curve_custom_in_ec(curve, was_advanced) &&
+		    !fan_curve_custom_in_ec(curve, will_be_advanced)) {
+			result = fan_curve_ec_read(curve->conf, &curve->custom);
+			if (result < 0)
+				return result;
+		}
+
+		result = fan_curve_write_for_mode(curve, will_be_advanced);
+		if (result < 0)
+			return result;
+	}
+
+	return 0;
+}
+
+/*
+ * Writes a new fan mode to the EC and keeps the fan curves consistent
+ * with it. Used by the fan_mode attribute.
+ */
+static int fan_mode_set(const struct msi_ec_mode *mode)
+{
+	bool was_advanced;
+	bool will_be_advanced = !strcmp(mode->name, FM_ADVANCED_NAME);
+	int result;
+
+	// devices without fan curves keep the plain behaviour
+	if (!fan_curves_available())
+		return ec_write(conf.fan_mode.address, mode->value);
+
+	mutex_lock(&fan_curve_mutex);
+
+	result = fan_mode_is_advanced(&was_advanced);
+	if (result < 0)
+		goto unlock;
+
+	// the curves go first, then the fan mode
+	result = fan_curves_prepare_mode_change(was_advanced, will_be_advanced);
+	if (result == 0)
+		result = ec_write(conf.fan_mode.address, mode->value);
+
+	// on failure the fan mode is unchanged: put back the curves it expects
+	if (result < 0)
+		fan_curves_write_for_mode(was_advanced);
+
+unlock:
+	mutex_unlock(&fan_curve_mutex);
+	return result;
+}
+
+/*
+ * Writes the expected curves back to the EC after a system resume.
+ *
+ * The firmware may reset the curve area of the EC to its defaults during
+ * a sleep cycle, while the fan mode is kept. The EC curve must NOT be read
+ * here: it may already be the reset one, and reading it would overwrite
+ * the custom curve kept in memory.
+ */
+static void __maybe_unused fan_curves_restore(void)
+{
+	bool advanced;
+	int result;
+
+	if (!fan_curves_available())
+		return;
+
+	mutex_lock(&fan_curve_mutex);
+
+	result = fan_mode_is_advanced(&advanced);
+	if (result == 0)
+		result = fan_curves_write_for_mode(advanced);
+
+	mutex_unlock(&fan_curve_mutex);
+
+	if (result < 0)
+		pr_warn("failed to restore the fan curves after resume (%d)\n",
+			result);
+}
+
+/*
+ * Enables one curve if the configuration supports it.
+ * Only reads the EC. If the curve cannot be read, it stays disabled and its
+ * attribute is not created.
+ */
+static void __init fan_curve_init(struct fan_curve *curve,
+				  const struct msi_ec_fan_curve_conf *fc)
+{
+	int result;
+
+	if (!fan_curve_conf_is_supported(fc))
+		return;
+
+	// the curve found in the EC at load time is taken as the default one
+	result = fan_curve_ec_read(fc, &curve->defaults);
+	if (result < 0) {
+		pr_warn("%s fan curve disabled: cannot read it from the EC (%d)\n",
+			curve->name, result);
+		return;
+	}
+
+	curve->custom = curve->defaults;
+	curve->conf = fc;
+}
+
+/*
+ * Must be called after the configuration is loaded and before the platform
+ * device is created, because the visibility of the curve attributes
+ * depends on it.
+ */
+static void __init fan_curves_init(void)
+{
+	fan_curve_init(&cpu_fan_curve, &conf.cpu.fan_curve);
+	fan_curve_init(&gpu_fan_curve, &conf.gpu.fan_curve);
+}
+
+/*
+ * Writes the default curves back to the EC and disables the curves.
+ * Must be called after the platform device is unregistered, so no sysfs
+ * or PM callback can use the curves anymore.
+ */
+static void fan_curves_exit(void)
+{
+	mutex_lock(&fan_curve_mutex);
+
+	for (int i = 0; i < ARRAY_SIZE(fan_curves); i++) {
+		struct fan_curve *curve = fan_curves[i];
+		int result;
+
+		if (!curve->conf)
+			continue;
+
+		result = fan_curve_ec_write(curve->conf, &curve->defaults);
+		if (result < 0)
+			pr_warn("failed to restore the default %s fan curve (%d)\n",
+				curve->name, result);
+
+		curve->conf = NULL;
+	}
+
+	mutex_unlock(&fan_curve_mutex);
+}
 
 // ============================================================ //
 // Sysfs platform device attributes (root)
@@ -2708,8 +3495,8 @@ static ssize_t fan_mode_store(struct device *dev, struct device_attribute *attr,
 		// NULL entries have NULL name
 
 		if (sysfs_streq(conf.fan_mode.modes[i].name, buf)) {
-			result = ec_write(conf.fan_mode.address,
-					  conf.fan_mode.modes[i].value);
+			// also keeps the fan curves consistent with the new mode
+			result = fan_mode_set(&conf.fan_mode.modes[i]);
 			if (result < 0)
 				return result;
 
@@ -2849,9 +3636,32 @@ static struct device_attribute dev_attr_cpu_realtime_fan_speed = {
 	.show = cpu_realtime_fan_speed_show,
 };
 
+static ssize_t cpu_fan_curve_show(struct device *device,
+				  struct device_attribute *attr, char *buf)
+{
+	return fan_curve_show(&cpu_fan_curve, buf);
+}
+
+static ssize_t cpu_fan_curve_store(struct device *dev,
+				   struct device_attribute *attr,
+				   const char *buf, size_t count)
+{
+	return fan_curve_store(&cpu_fan_curve, buf, count);
+}
+
+static struct device_attribute dev_attr_cpu_fan_curve = {
+	.attr = {
+		.name = "curve",
+		.mode = 0644,
+	},
+	.show = cpu_fan_curve_show,
+	.store = cpu_fan_curve_store,
+};
+
 static struct attribute *msi_cpu_attrs[] = {
 	&dev_attr_cpu_realtime_temperature.attr,
 	&dev_attr_cpu_realtime_fan_speed.attr,
+	&dev_attr_cpu_fan_curve.attr,
 	NULL
 };
 
@@ -2903,9 +3713,32 @@ static struct device_attribute dev_attr_gpu_realtime_fan_speed = {
 	.show = gpu_realtime_fan_speed_show,
 };
 
+static ssize_t gpu_fan_curve_show(struct device *device,
+				  struct device_attribute *attr, char *buf)
+{
+	return fan_curve_show(&gpu_fan_curve, buf);
+}
+
+static ssize_t gpu_fan_curve_store(struct device *dev,
+				   struct device_attribute *attr,
+				   const char *buf, size_t count)
+{
+	return fan_curve_store(&gpu_fan_curve, buf, count);
+}
+
+static struct device_attribute dev_attr_gpu_fan_curve = {
+	.attr = {
+		.name = "curve",
+		.mode = 0644,
+	},
+	.show = gpu_fan_curve_show,
+	.store = gpu_fan_curve_store,
+};
+
 static struct attribute *msi_gpu_attrs[] = {
 	&dev_attr_gpu_realtime_temperature.attr,
 	&dev_attr_gpu_realtime_fan_speed.attr,
+	&dev_attr_gpu_fan_curve.attr,
 	NULL
 };
 
@@ -3307,12 +4140,18 @@ static umode_t msi_ec_is_visible(struct kobject *kobj,
 	else if (attr == &dev_attr_cpu_realtime_fan_speed.attr)
 		address = conf.cpu.rt_fan_speed_address;
 
+	else if (attr == &dev_attr_cpu_fan_curve.attr)
+		return cpu_fan_curve.conf ? attr->mode : 0; // set by fan_curves_init()
+
 	/* gpu group */
 	else if (attr == &dev_attr_gpu_realtime_temperature.attr)
 		address = conf.gpu.rt_temp_address;
 
 	else if (attr == &dev_attr_gpu_realtime_fan_speed.attr)
 		address = conf.gpu.rt_fan_speed_address;
+
+	else if (attr == &dev_attr_gpu_fan_curve.attr)
+		return gpu_fan_curve.conf ? attr->mode : 0; // set by fan_curves_init()
 
 	/* default */
 	else
@@ -3376,12 +4215,30 @@ static int msi_platform_remove(struct platform_device *pdev)
 #endif
 }
 
+/*
+ * Called on resume from suspend and on thaw/restore from hibernation.
+ * The firmware may reset some EC settings during a sleep cycle; the ones
+ * the driver keeps in memory are written back here.
+ */
+static int __maybe_unused msi_platform_resume(struct device *dev)
+{
+	fan_curves_restore();
+
+	// a failed restore is logged, but must not fail the system resume
+	return 0;
+}
+
+static const struct dev_pm_ops msi_platform_pm_ops = {
+	SET_SYSTEM_SLEEP_PM_OPS(NULL, msi_platform_resume)
+};
+
 static struct platform_device *msi_platform_device;
 
 static struct platform_driver msi_platform_driver = {
 	.driver = {
 		.name = MSI_EC_DRIVER_NAME,
 		.dev_groups = msi_platform_groups,
+		.pm = &msi_platform_pm_ops,
 	},
 	.remove = msi_platform_remove,
 };
@@ -3437,6 +4294,10 @@ static int __init msi_ec_init(void)
 	result = load_configuration();
 	if (result < 0)
 		return result;
+
+	// before the platform device, which creates the curve attributes
+	if (conf_loaded)
+		fan_curves_init();
 
 	msi_platform_device = platform_create_bundle(&msi_platform_driver,
 						     msi_platform_probe,
@@ -3522,6 +4383,9 @@ static void __exit msi_ec_exit(void)
 
 	platform_device_unregister(msi_platform_device);
 	platform_driver_unregister(&msi_platform_driver);
+
+	// after the platform device, so no sysfs or PM callback can race with it
+	fan_curves_exit();
 
 	pr_info("module_exit\n");
 }

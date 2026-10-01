@@ -60,14 +60,55 @@ struct msi_ec_fan_mode_conf {
 	struct msi_ec_mode modes[5]; // fixed size for easier hard coding
 };
 
+/*
+ * Fan curve
+ *
+ * A fan curve is made of N fan speeds (s0 .. s(N-1)) and N-1 temperature
+ * thresholds (t1 .. t(N-1)). The fan runs at s0 below t1, at s1 between
+ * t1 and t2, ..., and at s(N-1) from t(N-1) upwards.
+ *
+ * In the EC memory the speeds and the temperatures are stored as two
+ * separate arrays of consecutive bytes:
+ *   speed_start_address       -> s0, s1, ..., s(N-1)  (N bytes)
+ *   temperature_start_address -> t1, t2, ..., t(N-1)  (N-1 bytes)
+ *
+ * The EC most likely also has a t0 byte right before t1, but its meaning
+ * is unclear, so the driver never touches it.
+ */
+
+/* Upper bound for entries_count, kept above any known device for extensibility. */
+#define MSI_EC_FAN_CURVE_MAX_ENTRIES 16
+
+/*
+ * The custom curve is kept in the EC in every fan mode.
+ */
+#define MSI_EC_FAN_CURVE_APPLY_NORMAL 0
+
+/*
+ * The custom curve is only written to the EC while the fan mode is
+ * "advanced". In every other fan mode the EC gets the default curve back.
+ * Required on devices where a custom curve in the EC breaks the fan
+ * control of the non-advanced modes.
+ */
+#define MSI_EC_FAN_CURVE_APPLY_RESET_ON_AUTO 1
+
+struct msi_ec_fan_curve_conf {
+	int speed_start_address;       // MSI_EC_ADDR_UNSUPP if unsupported
+	int temperature_start_address; // MSI_EC_ADDR_UNSUPP if unsupported
+	int entries_count;             // N, number of fan speeds
+	int apply_strategy;            // MSI_EC_FAN_CURVE_APPLY_*
+};
+
 struct msi_ec_cpu_conf {
 	int rt_temp_address;
 	int rt_fan_speed_address; // realtime % RPM
+	struct msi_ec_fan_curve_conf fan_curve;
 };
 
 struct msi_ec_gpu_conf {
 	int rt_temp_address;
 	int rt_fan_speed_address; // realtime % RPM
+	struct msi_ec_fan_curve_conf fan_curve;
 };
 
 struct msi_ec_led_conf {

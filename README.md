@@ -142,6 +142,7 @@ Still not merged:
 - Fan modes (auto, silent, basic, advanced)
 - Cpu/Gpu Temperatures
 - Cpu/Gpu Fan speeds
+- Cpu/Gpu Fan curves (supported devices only)
 
 
 ## Usage
@@ -257,6 +258,15 @@ This driver exports a few files in its own platform device, msi-ec, and is avail
   - Description: This entry reports the current gpu fan speed.
   - Access: Read
   - Valid values: 0 - 100 or 0 - 150 (percent)
+
+- `/sys/devices/platform/msi-ec/cpu/curve`, `/sys/devices/platform/msi-ec/gpu/curve`
+  - Description: These entries allow reading and setting the cpu/gpu fan curve. Each entry only exists if the fan curve is supported on the device.
+  - Access: Read, Write
+  - Valid values: `s0 t1 s1 t2 s2 ... t(N-1) s(N-1)`, where `s*` are fan speeds (percent), `t*` are temperatures (celsius scale) and N is the number of curve entries of the device. `s0` applies below `t1`. The whole curve must be written at once:
+    - temperatures: strictly increasing, 1 - 100
+    - fan speeds: non-decreasing, 0 - 150
+    - the last fan speed must be at least 85
+  - Notes: On some devices the custom curve is only applied while `fan_mode` is `advanced`; in the other fan modes the EC keeps its default curve and the custom curve is kept by the driver until `advanced` is selected. The curve is restored after suspend/hibernation, and the default curve is written back when the module is unloaded.
 
 In addition to these platform device attributes the driver registers itself in the Linux power_supply subsystem (Documentation/ABI/testing/sysfs-class-power) and is available to userspace under:
 
