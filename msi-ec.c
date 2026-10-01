@@ -4316,8 +4316,14 @@ static int __init msi_ec_init(void)
 	if (conf.charge_control_address != MSI_EC_ADDR_UNSUPP) {
 		result = ec_check_bit(conf.charge_control_address, 7,
 				      &charge_control_supported);
-		if (result < 0)
+		if (result < 0) {
+			// undo platform_create_bundle(), or the device and the
+			// driver would outlive the module code
+			platform_device_unregister(msi_platform_device);
+			platform_driver_unregister(&msi_platform_driver);
+			fan_curves_exit();
 			return result;
+		}
 	}
 
 	if (charge_control_supported)
